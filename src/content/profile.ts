@@ -2,6 +2,7 @@ export const profile = {
     name: "Prathik Vittal Beechanahally Prahlad",
     role: "Software Engineer • Distributed Systems • Cloud & AI",
     location: "Fullerton, CA",
+    avatar: "/avatar.jpg",
     phone: "+1 (213) 696-7196",
     email: "prathikvittal@csu.fullerton.edu",
     links: {

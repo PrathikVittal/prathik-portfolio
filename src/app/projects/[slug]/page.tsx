@@ -1,3 +1,6 @@
+// src/app/projects/[slug]/page.tsx
+
+import React from "react";
 import { notFound } from "next/navigation";
 import { projects } from "@/content/projects";
 import GlassCard from "@/components/GlassCard";
@@ -8,7 +11,14 @@ import ChatbotDemo from "@/demos/chatbot/Demo";
 import AssistantDemo from "@/demos/assistant/Demo";
 import VotingDemo from "@/demos/voting/Demo";
 
-const demoMap: Record<string, React.ReactNode> = {
+// ✅ Required for output: "export" so Next can prebuild /projects/chatbot, /projects/assistant, /projects/voting
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+    return projects.map((p) => ({ slug: p.slug }));
+}
+
+const demoMap: Record<(typeof projects)[number]["slug"], React.ReactNode> = {
     chatbot: <ChatbotDemo />,
     assistant: <AssistantDemo />,
     voting: <VotingDemo />,
@@ -29,6 +39,7 @@ export default function ProjectDemoPage({ params }: { params: { slug: string } }
             <GlassCard>
                 <h1 className="text-2xl font-semibold tracking-tight">{p.title}</h1>
                 <p className="mt-2 text-white/75">{p.summary}</p>
+
                 <div className="mt-4 flex flex-wrap gap-2">
                     {p.tags.map((t) => (
                         <Pill key={t}>{t}</Pill>
