@@ -1,12 +1,7 @@
-import type { NextConfig } from "next";
-
-const repoName = "prathik-portfolio";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
-  images: { unoptimized: true },
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
+  images: { unoptimized: true }, // recommended for static export if using next/image
 };
 
-export default nextConfig;
+module.exports = nextConfig;
