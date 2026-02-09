@@ -117,7 +117,6 @@ export const credlySkills: CredlySkill[] = [
     { name: "Data Pipelines", evidenceCount: 2 },
     { name: "Generative AI", evidenceCount: 2 },
     { name: "Identity And Access Management (IAM)", evidenceCount: 2 },
-
     { name: "Amazon API Gateway", evidenceCount: 1 },
     { name: "Amazon Web Services (AWS)", evidenceCount: 1 },
     { name: "Application Programming Interface (API)", evidenceCount: 1 },

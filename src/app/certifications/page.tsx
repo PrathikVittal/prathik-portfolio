@@ -435,7 +435,7 @@ export default function CertificationsPage() {
                 </div>
             </Section>
 
-            <Section title="Technical Skills" subtitle="Grouped for quick scanning.">
+            <Section title="TechnicalSkills" subtitle="Grouped for quick scanning.">
                 <div className="grid gap-4 md:grid-cols-2">
                     {skillGroups.map((g) => {
                         const Icon = g.icon;
