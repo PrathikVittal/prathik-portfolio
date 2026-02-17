@@ -41,7 +41,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="mt-6 space-y-4 text-left text-white/80">
+          <div className="mx-auto mt-6 max-w-3xl space-y-4 text-justify text-white/80 text-[18px] leading-relaxed">
             {profile.about.map((p) => (
               <p key={p} className="leading-relaxed">
                 {p}
