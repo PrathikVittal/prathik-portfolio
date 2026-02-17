@@ -6,7 +6,6 @@ export default function ProjectsPage() {
         <main className="mx-auto max-w-6xl px-4 py-10">
             <Section
                 title="Projects"
-                subtitle="Each project has a Demo page you can try with dummy values."
             >
                 <ProjectsGrid />
             </Section>
