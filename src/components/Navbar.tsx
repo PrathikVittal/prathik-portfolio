@@ -69,12 +69,35 @@ export default function Navbar() {
                         </nav>
 
                         {/* ✅ Download button (far right) */}
-                        <a
+                        {/* <a
                             href="/resume.pdf"
                             download
                             className="group absolute right-0 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white/90
                          bg-white/[0.06] shadow-[0_10px_30px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.10)]
                          backdrop-blur-2xl transition hover:text-white"
+                        > */}
+                        {/* liquid glass hover */}
+                        {/* <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition duration-200 group-hover:opacity-100 bg-white/[0.10] shadow-[0_10px_30px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.18)]" />
+                            <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition duration-200 group-hover:opacity-100 bg-[radial-gradient(120px_60px_at_30%_25%,rgba(255,255,255,0.35),transparent_60%)]" />
+                            <span className="pointer-events-none absolute inset-x-2 top-1 h-px rounded-full opacity-0 transition duration-200 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+
+                            <Download className="relative h-4 w-4 text-white/80" />
+                            <span className="relative">Download Resume</span>
+                        </a> */}
+                        <button
+                            onClick={async () => {
+                                const res = await fetch("/resume.pdf");
+                                const blob = await res.blob();
+                                const url = URL.createObjectURL(blob);
+                                const a = document.createElement("a");
+                                a.href = url;
+                                a.download = "Prathik_Vittal_Resume.pdf";
+                                a.click();
+                                URL.revokeObjectURL(url);
+                            }}
+                            className="group absolute right-0 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white/90
+             bg-white/[0.06] shadow-[0_10px_30px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.10)]
+             backdrop-blur-2xl transition hover:text-white"
                         >
                             {/* liquid glass hover */}
                             <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition duration-200 group-hover:opacity-100 bg-white/[0.10] shadow-[0_10px_30px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.18)]" />
@@ -83,7 +106,7 @@ export default function Navbar() {
 
                             <Download className="relative h-4 w-4 text-white/80" />
                             <span className="relative">Download Resume</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
