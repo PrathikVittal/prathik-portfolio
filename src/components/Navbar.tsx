@@ -70,7 +70,7 @@ export default function Navbar() {
 
                         {/* ✅ Download button (far right) */}
                         <a
-                            href="/Prathik Vittal B P.pdf"
+                            href="/resume.pdf"
                             download
                             className="group absolute right-0 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white/90
                          bg-white/[0.06] shadow-[0_10px_30px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.10)]
