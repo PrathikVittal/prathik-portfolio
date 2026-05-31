@@ -154,6 +154,11 @@ export const workshops: string[] = [
 
 export const awards: { title: string; detail: string }[] = [
     {
+        title: "Courtroom Chaos — Runner-Up & Judges' Favorite",
+        detail:
+            "UCLA Google DeepMind Hackathon • Built in under 24 hours: a real-time multiplayer AI courtroom game with a voice-interactive AI judge that assigns roles and delivers dynamic verdicts.",
+    },
+    {
         title: "Gameathon — 1st Place",
         detail: "Jyothy Institute of Technology • 24-hour game dev challenge using Unity3D, C++.",
     },

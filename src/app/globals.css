@@ -1,22 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #18181b;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
   height: 100%;
-} 
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
+  cursor: default;
+}
+
+/* No I-beam over text; keep pointer affordance on interactive elements */
+a,
+button,
+[role="button"],
+summary,
+label {
+  cursor: pointer;
+}
+
+.custom-cursor-dot,
+.custom-cursor-label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.custom-cursor-dot {
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  background: rgba(17, 17, 17, 0.88);
+  border-radius: 999px;
+}
+
+.custom-cursor-label {
+  margin: 16px 0 0 16px;
+  padding: 9px 13px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 850;
+  background: #111111;
+  border-radius: 999px;
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee {
@@ -32,4 +78,139 @@ body {
 
 .marquee-reverse {
   animation-direction: reverse;
+}
+
+/* ---------------- Project Showcase ---------------- */
+
+.projects-scroll-stage {
+  min-height: 380vh;
+}
+
+.projects-sticky {
+  position: sticky;
+  top: 88px;
+  height: min(1040px, calc(100vh - 44px));
+  min-height: 1140px;
+  transform-origin: center top;
+}
+
+.projects-stack-canvas {
+  position: relative;
+  height: 100%;
+}
+
+.project-stack-card {
+  position: absolute;
+  width: calc((100% - 36px) / 2);
+  will-change: transform, opacity;
+}
+
+.project-stack-card-0 {
+  top: clamp(120px, 16vh, 170px);
+  left: 0;
+}
+
+.project-stack-card-1 {
+  top: clamp(120px, 16vh, 170px);
+  right: 0;
+}
+
+.project-stack-card-2 {
+  top: clamp(560px, 62vh, 700px);
+  left: 0;
+}
+
+.project-stack-card-3 {
+  top: clamp(560px, 62vh, 700px);
+  right: 0;
+}
+
+.project-card {
+  display: grid;
+  gap: 16px;
+  color: #111111;
+  transform-origin: center center;
+}
+
+.project-media {
+  position: relative;
+  display: grid;
+  min-height: 300px;
+  aspect-ratio: 1.22;
+  place-items: center;
+  overflow: hidden;
+  background: #e7e7e7;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(20, 24, 32, 0.11);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-stack-card .project-media {
+  min-height: 0;
+  aspect-ratio: 1.28;
+}
+
+.project-media img {
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-media {
+  transform: translateY(-5px) scale(1.01);
+  border-color: rgba(17, 17, 17, 0.16);
+  box-shadow: 0 24px 54px rgba(20, 24, 32, 0.16);
+}
+
+.project-card:active .project-media {
+  transform: translateY(-1px) scale(0.995);
+}
+
+.project-card:hover .project-media img {
+  transform: scale(1.035);
+  filter: saturate(1.04) contrast(1.02);
+}
+
+.project-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+}
+
+.project-meta h3 {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.project-meta p {
+  margin: 4px 0 0;
+  color: #5e6269;
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.project-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  color: #272a2f;
+  font-size: 0.92rem;
+  font-weight: 800;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+}
+
+.project-action span {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-action span {
+  transform: translate(2px, -2px);
 }

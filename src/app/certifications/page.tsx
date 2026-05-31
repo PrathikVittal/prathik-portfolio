@@ -38,12 +38,12 @@
 //                             {credlyBadges.map((b) => (
 //                                 <div
 //                                     key={b.title}
-//                                     className="rounded-3xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+//                                     className="rounded-3xl border border-zinc-200 bg-zinc-50 p-4 transition hover:bg-zinc-100"
 //                                 >
 //                                     <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
 //                                         {/* Badge image */}
 //                                         <div className="shrink-0">
-//                                             <div className="relative h-[140px] w-[160px] overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+//                                             <div className="relative h-[140px] w-[160px] overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
 //                                                 {b.image ? (
 //                                                     // eslint-disable-next-line @next/next/no-img-element
 //                                                     <img
@@ -53,7 +53,7 @@
 //                                                     />
 //                                                 ) : (
 //                                                     <div className="flex h-full w-full items-center justify-center">
-//                                                         <Award className="h-8 w-8 text-white/50" />
+//                                                         <Award className="h-8 w-8 text-zinc-400" />
 //                                                     </div>
 //                                                 )}
 //                                             </div>
@@ -87,7 +87,7 @@
 //                                                         href={b.link}
 //                                                         target="_blank"
 //                                                         rel="noreferrer"
-//                                                         className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10"
+//                                                         className="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
 //                                                     >
 //                                                         View on Credly <ExternalLink className="h-4 w-4" />
 //                                                     </a>
@@ -114,7 +114,7 @@
 //                             </a>
 //                         </div>
 
-//                         <p className="mt-2 text-xs text-white/60">
+//                         <p className="mt-2 text-xs text-zinc-500">
 //                             Verified skills issued from the Credly platform. Click to expand.
 //                         </p>
 
@@ -227,7 +227,7 @@ import { profile } from "@/content/profile";
 function FlagPill({ flag }: { flag: "IN_DEMAND" | "FUTURE_PROOF" }) {
     const label = flag === "IN_DEMAND" ? "IN DEMAND" : "FUTURE PROOF";
     return (
-        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold tracking-wide text-white/80">
+        <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[11px] font-semibold tracking-wide text-zinc-700">
             {label}
         </span>
     );
@@ -262,12 +262,12 @@ export default function CertificationsPage() {
                     {/* ✅ LEFT: Credly Badges */}
                     <GlassCard>
                         <div className="flex items-center justify-between gap-3">
-                            <h3 className="text-sm font-semibold">Credly Badges</h3>
+                            <h3 className="text-sm font-semibold text-zinc-900">Credly Badges</h3>
                             <a
                                 href={profile.links.credly}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center gap-2 text-sm text-white/75 underline"
+                                className="inline-flex items-center gap-2 text-sm text-zinc-600 underline"
                             >
                                 View Credly <ExternalLink className="h-4 w-4" />
                             </a>
@@ -277,12 +277,12 @@ export default function CertificationsPage() {
                             {credlyBadges.map((b) => (
                                 <div
                                     key={b.title}
-                                    className="rounded-3xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+                                    className="rounded-3xl border border-zinc-200 bg-zinc-50 p-4 transition hover:bg-zinc-100"
                                 >
                                     <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                                         {/* Badge image */}
                                         <div className="shrink-0">
-                                            <div className="relative h-[140px] w-[160px] overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                                            <div className="relative h-[140px] w-[160px] overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
                                                 {b.image ? (
                                                     // eslint-disable-next-line @next/next/no-img-element
                                                     <img
@@ -292,7 +292,7 @@ export default function CertificationsPage() {
                                                     />
                                                 ) : (
                                                     <div className="flex h-full w-full items-center justify-center">
-                                                        <Award className="h-8 w-8 text-white/50" />
+                                                        <Award className="h-8 w-8 text-zinc-400" />
                                                     </div>
                                                 )}
                                             </div>
@@ -300,15 +300,15 @@ export default function CertificationsPage() {
 
                                         {/* Badge text */}
                                         <div className="min-w-0 flex-1">
-                                            <p className="text-base font-semibold text-white">{b.title}</p>
+                                            <p className="text-base font-semibold text-zinc-900">{b.title}</p>
 
-                                            <p className="mt-1 text-sm text-white/70">
-                                                Issued by <span className="text-white/85">{b.issuer}</span>
-                                                {b.date ? <span className="text-white/50"> • {b.date}</span> : null}
+                                            <p className="mt-1 text-sm text-zinc-600">
+                                                Issued by <span className="text-zinc-800">{b.issuer}</span>
+                                                {b.date ? <span className="text-zinc-500"> • {b.date}</span> : null}
                                             </p>
 
                                             {b.description ? (
-                                                <p className="mt-3 text-sm leading-relaxed text-white/75">
+                                                <p className="mt-3 text-sm leading-relaxed text-zinc-600">
                                                     {b.description}
                                                 </p>
                                             ) : null}
@@ -319,7 +319,7 @@ export default function CertificationsPage() {
                                                         href={b.link}
                                                         target="_blank"
                                                         rel="noreferrer"
-                                                        className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10"
+                                                        className="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
                                                     >
                                                         View on Credly <ExternalLink className="h-4 w-4" />
                                                     </a>
@@ -335,18 +335,18 @@ export default function CertificationsPage() {
                     {/* ✅ RIGHT: Credly Verified Skills */}
                     <GlassCard>
                         <div className="flex items-center justify-between gap-3">
-                            <h3 className="text-sm font-semibold">Credly Verified Skills</h3>
+                            <h3 className="text-sm font-semibold text-zinc-900">Credly Verified Skills</h3>
                             <a
                                 href={profile.links.credly}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center gap-2 text-sm text-white/75 underline"
+                                className="inline-flex items-center gap-2 text-sm text-zinc-600 underline"
                             >
                                 Skills Wallet <ExternalLink className="h-4 w-4" />
                             </a>
                         </div>
 
-                        <p className="mt-2 text-xs text-white/60">
+                        <p className="mt-2 text-xs text-zinc-500">
                             Verified skills issued from the Credly platform. Click to expand.
                         </p>
 
@@ -357,11 +357,11 @@ export default function CertificationsPage() {
                                 return (
                                     <details
                                         key={s.name}
-                                        className="group rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+                                        className="group rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition hover:bg-zinc-100"
                                     >
                                         <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
                                             <div className="min-w-0">
-                                                <p className="truncate text-sm font-semibold text-white">{s.name}</p>
+                                                <p className="truncate text-sm font-semibold text-zinc-900">{s.name}</p>
 
                                                 {s.flags?.length ? (
                                                     <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -372,28 +372,28 @@ export default function CertificationsPage() {
                                                 ) : null}
 
                                                 {sourcesLine ? (
-                                                    <p className="mt-2 text-xs text-white/60">{sourcesLine}</p>
+                                                    <p className="mt-2 text-xs text-zinc-500">{sourcesLine}</p>
                                                 ) : null}
                                             </div>
 
-                                            <ChevronDown className="h-4 w-4 text-white/60 transition group-open:rotate-180" />
+                                            <ChevronDown className="h-4 w-4 text-zinc-500 transition group-open:rotate-180" />
                                         </summary>
 
                                         {/* ✅ Expanded content (NO Learn more link) */}
                                         <div className="mt-4 space-y-4">
-                                            <p className="text-sm leading-relaxed text-white/75">{s.description}</p>
+                                            <p className="text-sm leading-relaxed text-zinc-600">{s.description}</p>
 
                                             {/* ✅ Badge refs list — NO badge images */}
-                                            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                                                <p className="text-sm font-semibold text-white/90">Credly Badges</p>
+                                            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+                                                <p className="text-sm font-semibold text-zinc-800">Credly Badges</p>
 
                                                 <div className="mt-3 space-y-2">
                                                     {s.credlyBadges.map((b) => (
-                                                        <div key={`${s.name}-${b.title}`} className="text-sm text-white/80">
-                                                            <span className="font-semibold text-white/90">{b.title}</span>
-                                                            <span className="text-white/70">, {b.issuer}</span>
+                                                        <div key={`${s.name}-${b.title}`} className="text-sm text-zinc-700">
+                                                            <span className="font-semibold text-zinc-800">{b.title}</span>
+                                                            <span className="text-zinc-600">, {b.issuer}</span>
                                                             {b.issued ? (
-                                                                <span className="text-white/55"> (Issued {b.issued})</span>
+                                                                <span className="text-zinc-500"> (Issued {b.issued})</span>
                                                             ) : null}
                                                         </div>
                                                     ))}
@@ -410,23 +410,23 @@ export default function CertificationsPage() {
                 {/* ✅ Awards + Workshops */}
                 <div className="mt-4 grid gap-4 md:grid-cols-2">
                     <GlassCard>
-                        <h3 className="text-sm font-semibold">Awards</h3>
+                        <h3 className="text-sm font-semibold text-zinc-900">Awards</h3>
                         <div className="mt-4 space-y-3">
                             {awards.map((a) => (
-                                <div key={a.title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                                    <p className="text-sm font-semibold">{a.title}</p>
-                                    <p className="mt-1 text-sm text-white/75">{a.detail}</p>
+                                <div key={a.title} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+                                    <p className="text-sm font-semibold text-zinc-900">{a.title}</p>
+                                    <p className="mt-1 text-sm text-zinc-600">{a.detail}</p>
                                 </div>
                             ))}
                         </div>
                     </GlassCard>
 
                     <GlassCard>
-                        <h3 className="text-sm font-semibold">Workshops & Activities</h3>
+                        <h3 className="text-sm font-semibold text-zinc-900">Workshops & Activities</h3>
                         <div className="mt-4 space-y-3">
                             {workshops.map((w) => (
-                                <div key={w} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                                    <p className="text-sm text-white/85">{w}</p>
+                                <div key={w} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+                                    <p className="text-sm text-zinc-700">{w}</p>
                                 </div>
                             ))}
                         </div>
@@ -442,10 +442,10 @@ export default function CertificationsPage() {
                         return (
                             <GlassCard key={g.title}>
                                 <div className="flex items-center gap-2">
-                                    <div className="rounded-xl border border-white/10 bg-white/5 p-2">
-                                        <Icon className="h-4 w-4 text-white/90" />
+                                    <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-2">
+                                        <Icon className="h-4 w-4 text-zinc-800" />
                                     </div>
-                                    <h4 className="text-sm font-semibold">{g.title}</h4>
+                                    <h4 className="text-sm font-semibold text-zinc-900">{g.title}</h4>
                                 </div>
                                 <div className="mt-4 flex flex-wrap gap-2">
                                     {g.items.map((x) => (
