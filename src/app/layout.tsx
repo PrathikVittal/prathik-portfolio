@@ -7,6 +7,9 @@ import SiteFooter from "@/components/SiteFooter";
 export const metadata: Metadata = {
   title: "Prathik | Portfolio",
   description: "Software Engineer portfolio",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
