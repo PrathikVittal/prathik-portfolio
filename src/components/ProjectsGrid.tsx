@@ -1,5 +1,6 @@
 import GlassCard from "./GlassCard";
 import Pill from "./Pill";
+import BoldText from "./BoldText";
 import { ExternalLink } from "lucide-react";
 import { projects } from "@/content/projects";
 
@@ -34,7 +35,7 @@ export default function ProjectsGrid() {
 
           <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-zinc-600">
             {p.bullets.map((b, idx) => (
-              <li key={idx}>{b}</li>
+              <li key={idx}><BoldText text={b} /></li>
             ))}
           </ul>
 

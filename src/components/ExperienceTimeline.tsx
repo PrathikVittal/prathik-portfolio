@@ -1,5 +1,6 @@
 import GlassCard from "./GlassCard";
 import Pill from "./Pill";
+import BoldText from "./BoldText";
 import { experience } from "@/content/experience";
 
 export default function ExperienceTimeline() {
@@ -30,7 +31,7 @@ export default function ExperienceTimeline() {
 
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-zinc-600">
                 {e.bullets.map((b, idx) => (
-                  <li key={idx}>{b}</li>
+                  <li key={idx}><BoldText text={b} /></li>
                 ))}
               </ul>
             </GlassCard>
