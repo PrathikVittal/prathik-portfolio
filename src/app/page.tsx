@@ -5,6 +5,7 @@ import type { ShowcaseProject } from "@/components/ProjectShowcase";
 import { ProjectShowcase } from "@/components/ProjectShowcase";
 import SkillsTicker from "@/components/SkillsTicker";
 import { skillsTickerRows } from "@/content/SkillsTicker";
+import BoldText from "@/components/BoldText";
 import Link from "next/link";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
@@ -133,7 +134,7 @@ function ExperiencePreview() {
             <h3 className="text-2xl font-black text-zinc-900">{item.company}</h3>
             <p className="mt-1 text-sm font-bold text-zinc-500">{item.role}</p>
             <p className="mt-3 max-w-xl text-base leading-relaxed text-zinc-600">
-              {item.bullets[0]}
+              <BoldText text={item.bullets[0]} />
             </p>
             <p className="mt-3 text-sm font-medium text-zinc-400">{item.dates}</p>
           </div>

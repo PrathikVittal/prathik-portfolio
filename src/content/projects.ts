@@ -22,7 +22,7 @@ export const projects: Project[] = [
             "**Bulk ZIP export** with **NextAuth**-secured **PostgreSQL/Prisma** storage, deployed on AWS.",
         ],
         image: "/projects/Digital%20Disposable%20Events.png",
-        codeUrl: "https://github.com/YOUR_REPO", // TODO
+        codeUrl: "https://github.com/PrathikVittal/disposable-camera",
         demoLabel: "View Project",
     },
     {
@@ -52,7 +52,7 @@ export const projects: Project[] = [
             "**Background job orchestration** with **Inngest** and secure authentication.",
         ],
         image: "/projects/Agentic%20AI%20Assistant.png",
-        codeUrl: "https://github.com/YOUR_REPO", // TODO
+        codeUrl: "https://github.com/PrathikVittal/ai-assistant-app",
         demoLabel: "View Project",
     },
     {
@@ -175,7 +175,7 @@ export const projects: Project[] = [
             "**Three-panel workspace** (assistant list, chat UI, settings) with **real-time Convex-backed** message persistence across sessions.",
             "**Google OAuth** authentication and per-user assistant rosters stored in **Convex**, so your lineup persists across devices.",
         ],
-        codeUrl: "https://github.com/YOUR_REPO", // TODO
+        codeUrl: "https://github.com/PrathikVittal/ai-chatbot-w-agents",
         demoLabel: "View Project",
     },
     {
