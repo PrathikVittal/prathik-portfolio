@@ -22,7 +22,8 @@ export type IconName =
     | "ml"
     | "html"
     | "css"
-    | "git";
+    | "git"
+    ;
 
 export type SkillItem = {
     label: string;

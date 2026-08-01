@@ -11,6 +11,48 @@ export type CredlyBadge = {
 
 export const credlyBadges: CredlyBadge[] = [
     {
+        title: "Introduction to subagents",
+        issuer: "Anthropic",
+        image: "/badges/Introduction to subagents.png",
+        description:
+            "Covers designing and orchestrating multi-agent architectures where a primary agent delegates tasks to specialized subagents, enabling complex autonomous workflows.",
+    },
+    {
+        title: "Introduction to Model Context Protocol",
+        issuer: "Anthropic",
+        image: "/badges/Introduction to Model Context Protocol.png",
+        description:
+            "Introduces MCP — the open standard for connecting AI models to external tools, data sources, and services — covering server setup, tool definitions, and client integration.",
+    },
+    {
+        title: "Introduction to agent skills",
+        issuer: "Anthropic",
+        image: "/badges/Introduction to agent skills.png",
+        description:
+            "Covers building agentic AI systems with tool use, memory, and multi-step reasoning using the Claude API and the Anthropic Agent SDK.",
+    },
+    {
+        title: "Claude 101",
+        issuer: "Anthropic",
+        image: "/badges/Claude 101.png",
+        description:
+            "Foundational course on Claude's capabilities, prompt design patterns, and responsible use across text, code, and reasoning tasks.",
+    },
+    {
+        title: "Claude with the Anthropic API",
+        issuer: "Anthropic",
+        image: "/badges/Building with the Claude API.png",
+        description:
+            "Hands-on course covering practical development with the Anthropic API — including messages, tool use, streaming, prompt caching, and production integration patterns.",
+    },
+    {
+        title: "AI Fluency: Framework & Foundations",
+        issuer: "Anthropic",
+        image: "/badges/AI Fluency- Framework & Foundations.png",
+        description:
+            "Collaborative certification from Anthropic, University College Cork, Ringling College of Art + Design, Higher Education Authority, and the National Forum — covering AI literacy, ethical frameworks, and responsible AI integration.",
+    },
+    {
         title: "Build and Deploy Machine Learning Solutions on Vertex AI Skill Badge",
         issuer: "Google Cloud",
         image: "https://images.credly.com/images/f4c342c9-af98-4352-b54a-a8a166ee8f68/image.png",
