@@ -6,11 +6,11 @@ export const experience = [
         dates: "Aug 2022 – Jul 2024",
         highlights: ["Agile/Scrum", "Vertex AI", "Serverless", "API Security", "CI/CD"],
         bullets: [
-            "Delivered **10+ gameplay features** for The Golf Club 2019 and ProTeePlay across **4 Agile sprints**, improving player engagement metrics by **20%**.",
-            "Developed a **cloud-native technical assistance portal** using **Serverless Computing**, resulting in an average **30% decrease** in incoming support tickets.",
-            "Reduced hardware-to-backend inference latency by **25%** by integrating **Vertex AI** for real-time data processing, enforcing **API security best practices** across all simulator endpoints.",
-            "Triaged and resolved **100+ customer-reported bugs** via **Mantis** and **Zendesk**, reducing average ticket resolution time by **20%** through structured defect tracking and cross-team communication.",
-            "Maintained **94% uptime** across global cloud environments by engineering automated **CI/CD pipelines** that streamlined version upgrades and reduced deployment failures by **30%**.",
+            "Developed and shipped **gameplay features** for **The Golf Club 2019** and **ProTee Play** using **Agile/Scrum** methodologies, contributing to a **20% improvement** in player engagement metrics across major releases.",
+            "Created a **cloud-native self-service portal** that enabled customers to resolve common simulator issues independently, reducing support tickets by **30%**.",
+            "Integrated **Vertex AI** for real-time data processing between simulator hardware and back-end systems, reducing inference latency by **25%** on the endpoints I owned while following **API security best practices**.",
+            "Worked directly with customers to diagnose real-world simulator issues and ship fixes and improvements, tracking defects and resolutions in **Mantis**.",
+            "Contributed to production releases via **CI/CD pipelines**, reducing deployment issues during version upgrades.",
         ],
     },
     {

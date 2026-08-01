@@ -29,7 +29,7 @@ export const projects: Project[] = [
         slug: "courtroom-chaos",
         title: "Courtroom Chaos",
         summary:
-            "A real-time multiplayer AI courtroom game with a voice-interactive AI judge, built in under 24 hours at the UCLA Google DeepMind Hackathon (Runner-Up & Judges' Favorite).",
+            "A real-time multiplayer AI courtroom game supporting up to 8 players over WebSockets, with a voice-interactive AI judge, built in under 24 hours at the UCLA Google DeepMind Hackathon (Runner-Up & Judges' Favorite).",
         tags: ["React", "Node.js", "WebSockets", "Google Gemini API (Live, Lyria, Nano Banana)"],
         bullets: [
             "**Voice-interactive AI judge** that listens, interrupts, assigns roles, and delivers dynamic verdicts.",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
         slug: "ai-workforce-os",
         title: "AI Workforce OS",
         summary:
-            "A distributed multi-agent AI workforce OS where each node runs a permission-scoped agent that mirrors the authority of a real team role — PM, Tech Lead, SDE, or QA — serving its user as a LangGraph copilot.",
+            "A distributed multi-agent AI workforce OS running 12 concurrent agents across 6 MCP-integrated tools, where each node runs a permission-scoped agent that mirrors the authority of a real team role — PM, Tech Lead, SDE, or QA — serving its user as a LangGraph copilot.",
         tags: ["Next.js", "TypeScript", "LangGraph", "CrewAI", "MCP", "NATS", "PostgreSQL", "Claude Agent SDK"],
         bullets: [
             "Each agent node runs **permission-scoped** to its role **(PM/TL/SDE/QA)**, acting as a **LangGraph copilot** for code review, debugging, and planning via **MCP tools** connected to GitHub, Jira, and the filesystem.",
