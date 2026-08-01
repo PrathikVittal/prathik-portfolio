@@ -2,45 +2,54 @@ import { notFound } from "next/navigation";
 import { projects } from "@/content/projects";
 import GlassCard from "@/components/GlassCard";
 import Pill from "@/components/Pill";
+import BoldText from "@/components/BoldText";
 import Link from "next/link";
-
-import ChatbotDemo from "@/demos/chatbot/Demo";
-import AssistantDemo from "@/demos/assistant/Demo";
-import VotingDemo from "@/demos/voting/Demo";
-
-const demoMap: Record<string, React.ReactNode> = {
-    chatbot: <ChatbotDemo />,
-    assistant: <AssistantDemo />,
-    voting: <VotingDemo />,
-};
 
 export function generateStaticParams() {
     return projects.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProjectDemoPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
     const p = projects.find((x) => x.slug === params.slug);
     if (!p) return notFound();
 
     return (
         <main className="mx-auto max-w-6xl px-4 py-10">
             <div className="mb-4">
-                <Link href="/projects" className="text-sm text-white/70 underline">
+                <Link href="/projects" className="text-sm text-zinc-500 hover:text-zinc-900">
                     ← Back to Projects
                 </Link>
             </div>
 
             <GlassCard>
-                <h1 className="text-2xl font-semibold tracking-tight">{p.title}</h1>
-                <p className="mt-2 text-white/75">{p.summary}</p>
+                <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">{p.title}</h1>
+                <p className="mt-2 text-sm text-zinc-600">{p.summary}</p>
+
                 <div className="mt-4 flex flex-wrap gap-2">
                     {p.tags.map((t) => (
                         <Pill key={t}>{t}</Pill>
                     ))}
                 </div>
-            </GlassCard>
 
-            <div className="mt-6">{demoMap[p.slug]}</div>
+                <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-zinc-600">
+                    {p.bullets.map((b, idx) => (
+                        <li key={idx}><BoldText text={b} /></li>
+                    ))}
+                </ul>
+
+                {p.codeUrl && !p.codeUrl.includes("YOUR_REPO") && (
+                    <div className="mt-6">
+                        <a
+                            href={p.codeUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded-2xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+                        >
+                            View on GitHub ↗
+                        </a>
+                    </div>
+                )}
+            </GlassCard>
         </main>
     );
 }
